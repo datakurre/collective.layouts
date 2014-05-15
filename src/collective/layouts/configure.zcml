@@ -1,0 +1,19 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:i18n="http://namespaces.zope.org/i18n"
+    i18n_domain="collective.layouts">
+
+  <i18n:registerTranslations directory="locales" />
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Experimental layouts"
+      description="Activates collective.layouts"
+      directory="profiles/default"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <include file="upgrades.zcml"/>
+
+</configure>
